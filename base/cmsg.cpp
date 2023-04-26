@@ -26,6 +26,10 @@
 
 #include <android-base/logging.h>
 
+#ifndef PAGE_SIZE
+#define PAGE_SIZE (size_t)(sysconf(_SC_PAGESIZE))
+#endif
+
 namespace android {
 namespace base {
 
